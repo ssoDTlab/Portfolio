@@ -393,6 +393,9 @@
 
         .contact-content {
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .contact-info {
@@ -420,6 +423,30 @@
             font-size: 1.2rem;
         }
 
+        /* --- Add to your existing CSS --- */
+
+        /* Style for the new contact link wrapper */
+        .contact-link {
+            text-decoration: none;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+
+        /* Hover effect for the entire link area */
+        .contact-link:hover {
+            transform: scale(1.05);
+        }
+
+        /* Ensure the inner contact-item inherits transitions */
+        .contact-link .contact-item {
+            transition: background-color 0.3s ease;
+        }
+
+        /* Optional: Slight background change on icon hover for more feedback */
+        .contact-link:hover .contact-icon {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
         /* Animations */
         @keyframes fadeInUp {
             from {
@@ -435,7 +462,7 @@
         a:visited {
             color: inherit;       /* 방문해도 색상 유지 */
         }
-
+        
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-20px); }
@@ -745,20 +772,23 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-content">
-                <h2 class="section-title" style="color: white;">Contact</h2>
-                <p>Contact me!</p>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">📧</div>
-                        <span>llfkstep9811@gmail.com</span>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">🐱</div>
-                        <span><a href="https://github.com/ssoDTlab">GitHub</a></span>
-                    </div>
+   <section id="contact" class="contact">
+    <div class="container">
+        <div class="contact-content">
+            <div class="contact-info">
+                    <a href="mailto:llfkstep9811@gmail.com" class="contact-link">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <span>llfkstep9811@gmail.com</span>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/ssoDTlab" target="_blank" class="contact-link">
+                        <div class="contact-item">
+                            <div class="contact-icon">🐱</div>
+                            <span>ssoDTlab</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
