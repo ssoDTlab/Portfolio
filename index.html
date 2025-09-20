@@ -235,7 +235,7 @@
         }
 
         .about-text p {
-            font-size: 1.1rem;
+            font-size: 1.3rem;
             margin-bottom: 1.5rem;
             color: #666;
             line-height: 1.8;
@@ -431,6 +431,10 @@
                 transform: translateY(0);
             }
         }
+        
+        a:visited {
+            color: inherit;       /* 방문해도 색상 유지 */
+        }
 
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
@@ -474,7 +478,7 @@
             }
             
             .about-text p {
-                font-size: 1rem;
+                font-size: 1.1rem;
             }
 
             /* Publications Mobile */
@@ -606,10 +610,10 @@
         <div class="nav-container">
             <div class="logo">Portfolio</div>
             <ul class="nav-links">
-                <li><a href="#about">소개</a></li>
-                <li><a href="#publications">논문</a></li>
-                <li><a href="#projects">프로젝트</a></li>
-                <li><a href="#contact">연락처</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact me!</a></li>
             </ul>
         </div>
     </nav>
@@ -621,10 +625,11 @@
             <div class="about-content">
                 <div class="profile-img">👨‍💻</div>
                 <div class="about-text">
-                    <h3>안녕하세요!</h3>
-                    <p>저는 사용자 중심의 경험을 만드는 것을 좋아하는 풀스택 개발자입니다. 새로운 기술을 배우고 도전하는 것을 즐기며, 항상 더 나은 코드를 작성하기 위해 노력합니다.</p>
-                    <p>3년간의 개발 경험을 통해 다양한 프로젝트를 성공적으로 완수했으며, 팀워크를 중시하고 지속적인 학습을 추구합니다.</p>
-                    <p>React, Node.js, Python을 주로 사용하며, 클린 코드와 효율적인 솔루션을 만드는 것이 목표입니다.</p>
+                    <h3>Hola!</h3>
+                    <p>
+                    my name is Sangwon Seo. I am passionate about research and development in image processing and computer vision, with a particular focus on building software that can detect objects and automatically take actions based on the results. I believe such technologies play a key role in enabling autonomous systems that can perceive and respond to their environments without human intervention.
+                    In addition, I am deeply interested in leveraging generative models such as VAEs, GANs, and Diffusion Models for data augmentation. My research goes beyond simply improving model performance—I aim to maximize the utility of data, enhance generalization capabilities, and ultimately connect these methods to practical real-world applications.
+                    </p>
                 </div>
             </div>
         </div>
@@ -636,13 +641,18 @@
             <h2 class="section-title">Publications</h2>
             <div class="publications-grid">
                 <div class="publication-card">
-                    <div class="publication-year">2024</div>
-                    <h3 class="publication-title">Deep Learning Approaches for Natural Language Processing in Korean Text Analysis</h3>
-                    <p class="publication-authors">First Author, Second Author, Third Author</p>
-                    <p class="publication-venue">Journal of Artificial Intelligence Research, Vol. 45</p>
+                    <div class="publication-year">2025</div>
+                    <h3 class="publication-title">Feature Space-Based Center Constraint Loss for Improving Quality and Diversity in GANs</h3>
+                    <p class="publication-authors">Sang-Won Seo, Hyun-Cheol Park</p>
+                    <p class="publication-venue">The 6th Korea Artificial Intelligence Conference</p>
                     <p class="publication-abstract">
-                        한국어 텍스트 분석을 위한 딥러닝 접근법을 제안하였으며, 기존 모델 대비 15% 향상된 성능을 달성했습니다. 
-                        BERT 기반 모델을 한국어에 최적화하여 감정분석과 개체명 인식에서 우수한 결과를 보였습니다.
+                        Generative Adversarial Networks (GANs) often rely on various empirical and experimental tricks during training, 
+                        which makes it challenging to objectively demonstrate the effectiveness of newly proposed methods.
+                        To address this issue, we conducted experiments using one of the most fundamental architectures, 
+                        DCGAN, in order to logically validate the effectiveness of the proposed central constraint loss function. 
+                        By embedding the training dataset into a feature space and imposing a constraint based on the distance between the distribution center and the mean, 
+                        we ensured that the generated images did not deviate excessively. As a result, we confirmed improvements in both quality and diversity metrics without requiring any modifications to the network architecture. 
+                        This demonstrates that our proposed approach can enhance performance even in a simple baseline model, thereby supporting the generality and scalability of the method.
                     </p>
                     <div class="publication-links">
                         <a href="#">PDF</a>
@@ -652,50 +662,22 @@
                 </div>
                 
                 <div class="publication-card">
-                    <div class="publication-year">2023</div>
-                    <h3 class="publication-title">Efficient Web Application Architecture Using Microservices and Container Orchestration</h3>
-                    <p class="publication-authors">First Author, Co-Author</p>
-                    <p class="publication-venue">International Conference on Software Engineering (ICSE)</p>
+                    <div class="publication-year">2025</div>
+                    <h3 class="publication-title">Improving Quality and Diversity of GAN Image Generation through Cosine Similarity-Based Diversity Loss</h3>
+                    <p class="publication-authors">Sang-Won Seo, Hyun-Cheol Park</p>
+                    <p class="publication-venue">The 57th Spring Conference of the Korea Institute of Information and Commu-
+                    nication Engineering (KIICE)</p>
                     <p class="publication-abstract">
-                        마이크로서비스와 컨테이너 오케스트레이션을 활용한 효율적인 웹 애플리케이션 아키텍처를 제안했습니다. 
-                        Docker와 Kubernetes를 사용하여 확장성과 유지보수성을 크게 개선했습니다.
+                        In this paper, 
+                        we propose a cosine similarity–based diversity loss function to address the common issues of mode collapse and the imbalance between quality and diversity in GAN-based image generation. The proposed method calculates the similarity among generated images in the intermediate feature space of the discriminator, 
+                        suppressing excessively similar outputs. Furthermore, it incorporates adaptive weighting that reflects the differences from the real data distribution, thereby enhancing both quality and diversity simultaneously. 
+                        Experimental results on the CelebA and LSUN datasets demonstrate that our model outperforms DCGAN, WGAN-GP, and MSGAN in terms of FID and MS-SSIM metrics. 
+                        These findings verify the effectiveness of the proposed approach in improving image quality while preserving diversity in GAN-based generation.
                     </p>
                     <div class="publication-links">
                         <a href="#">PDF</a>
                         <a href="#">DOI</a>
                         <a href="#">Slides</a>
-                    </div>
-                </div>
-                
-                <div class="publication-card">
-                    <div class="publication-year">2023</div>
-                    <h3 class="publication-title">Real-time Data Visualization Techniques for IoT Applications</h3>
-                    <p class="publication-authors">First Author, Second Author, Third Author</p>
-                    <p class="publication-venue">IEEE Transactions on Visualization and Computer Graphics</p>
-                    <p class="publication-abstract">
-                        IoT 환경에서의 실시간 데이터 시각화 기법을 연구했습니다. 
-                        WebGL과 D3.js를 결합하여 대용량 센서 데이터를 효과적으로 시각화하는 방법론을 개발했습니다.
-                    </p>
-                    <div class="publication-links">
-                        <a href="#">PDF</a>
-                        <a href="#">DOI</a>
-                        <a href="#">Demo</a>
-                    </div>
-                </div>
-                
-                <div class="publication-card">
-                    <div class="publication-year">2022</div>
-                    <h3 class="publication-title">Machine Learning-Based Anomaly Detection in Distributed Systems</h3>
-                    <p class="publication-authors">First Author, Co-Author, Third Author</p>
-                    <p class="publication-venue">ACM Symposium on Cloud Computing (SoCC)</p>
-                    <p class="publication-abstract">
-                        분산 시스템에서의 머신러닝 기반 이상 탐지 시스템을 개발했습니다. 
-                        무감독 학습 알고리즘을 사용하여 시스템 장애를 사전에 예측하는 모델을 구현했습니다.
-                    </p>
-                    <div class="publication-links">
-                        <a href="#">PDF</a>
-                        <a href="#">DOI</a>
-                        <a href="#">Code</a>
                     </div>
                 </div>
             </div>
@@ -710,8 +692,15 @@
                 <div class="project-card">
                     <div class="project-img">🛒</div>
                     <div class="project-content">
-                        <h3>E-Commerce Platform</h3>
-                        <p>React와 Node.js를 사용한 완전한 온라인 쇼핑몰 플랫폼입니다. 결제 시스템, 재고 관리, 사용자 인증 등의 기능을 포함합니다.</p>
+                        <h3>Deepfake Detection Web Application</h3>
+                        <p>Built a web application that enables users to upload images and videos, automatically selects the most suitable model
+                           among three, and detects deepfakes. For videos, users could specify a time interval to analyze, and the system provided
+                           access to prior detection results.
+                           <br>
+                           Contributed to frontend development and implemented a Stable Diffusion–based residual analysis module: real
+                           images are consistently reconstructed during denoising, while deepfakes exhibit distinctive residual artifacts, which
+                           were leveraged for CNN-based classification.
+                        </p>
                         <div class="project-links">
                             <a href="#">Live Demo</a>
                             <a href="#">GitHub</a>
@@ -721,22 +710,33 @@
                 <div class="project-card">
                     <div class="project-img">📊</div>
                     <div class="project-content">
-                        <h3>Data Dashboard</h3>
-                        <p>실시간 데이터 시각화 대시보드입니다. Chart.js와 D3.js를 활용하여 인터랙티브한 차트와 그래프를 제공합니다.</p>
+                        <h3>Roadside CCTV-Based Vehicle Classification and Noise Estimation System</h3>
+                        <p>
+                            Developed a system that processes roadside CCTV footage to detect vehicles using YOLOv8, classify their types with
+                            MobileNet, and estimate the traffic noise level of the observed area.                           
+                            <br>
+                            Designed the overall system architecture and proposed an energy-based noise estimation algorithm, which improved
+                            accuracy compared to simple linear summation and produced results closer to real-world noise measurements.
+                        </p>
                         <div class="project-links">
                             <a href="#">Live Demo</a>
-                            <a href="#">GitHub</a>
+                            <a href="https://github.com/ssoDTlab/Roadside-CCTV-Based-Vehicle-Classification-and-Noise-Estimation-System">GitHub</a>
                         </div>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-img">🤖</div>
                     <div class="project-content">
-                        <h3>AI Chatbot</h3>
-                        <p>자연어 처리를 활용한 고객 서비스 챗봇입니다. Python과 TensorFlow를 사용하여 구현했습니다.</p>
+                        <h3>ROI-Based Change Detection and Automation System</h3>
+                        <p>
+                           Developed a modular application that performs real-time video capture and anomaly detection, integrating ROI
+                           selection, object detection (Haar Cascade, Mean Shift), and edge-based analysis into a PySide6 GUI.
+                           Designed and implemented multi-threaded video processing, a TensorFlow-based anomaly detection module with
+                           frame-by-frame labeling, and an automation feature that triggers keyboard events based on ROI conditions. 
+                        </p>
                         <div class="project-links">
                             <a href="#">Live Demo</a>
-                            <a href="#">GitHub</a>
+                            <a href="https://github.com/ssoDTlab/ROI-Based-Change-Detection-and-Automation-System">GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -749,23 +749,15 @@
         <div class="container">
             <div class="contact-content">
                 <h2 class="section-title" style="color: white;">Contact</h2>
-                <p>새로운 기회나 협업에 관심이 있으시면 언제든 연락주세요!</p>
+                <p>Contact me!</p>
                 <div class="contact-info">
                     <div class="contact-item">
                         <div class="contact-icon">📧</div>
-                        <span>contact@example.com</span>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📱</div>
-                        <span>010-1234-5678</span>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">💼</div>
-                        <span>LinkedIn</span>
+                        <span>llfkstep9811@gmail.com</span>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">🐱</div>
-                        <span>GitHub</span>
+                        <span><a href="https://github.com/ssoDTlab">GitHub</a></span>
                     </div>
                 </div>
             </div>
